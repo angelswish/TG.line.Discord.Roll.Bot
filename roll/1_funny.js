@@ -72,7 +72,7 @@ rollDiceCommand = function (inputStr, mainMsg) {
 		case /隨機|choice/i.test(mainMsg[0]) && (mainMsg.length >= 3):
 			return choice(inputStr, mainMsg);
 		case /塔羅/i.test(mainMsg[0]):
-			if (mainMsg[0].match(/^每日塔羅/) != null) return NomalDrawTarot(mainMsg[1], mainMsg[2]); //預設抽 79 張
+			if (mainMsg[0].match(/^塔羅/) != null) return NomalDrawTarot(mainMsg[1], mainMsg[2]); //預設抽 79 張
 			if (mainMsg[0].match(/^時間塔羅/) != null) return MultiDrawTarot(mainMsg[1], mainMsg[2], 1);
 			if (mainMsg[0].match(/^大十字塔羅/) != null) return MultiDrawTarot(mainMsg[1], mainMsg[2], 2);
 			break;
